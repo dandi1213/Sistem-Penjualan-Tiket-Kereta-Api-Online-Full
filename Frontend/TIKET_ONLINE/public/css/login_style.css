@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3498db;
+    margin: 0;
+    margin-left: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.login-background {
+    margin-left: 20px;
+    margin-right: 50px;
+    height: 77vh; /* Biarkan tinggi menyesuaikan proporsi gambar */
+}
+
+.login-logo {
+    height: 7vh;
+    margin-bottom: 20px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #00000061;
+}
+
+.register-link {
+    margin-top: 20px;
+    color: #3498db;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

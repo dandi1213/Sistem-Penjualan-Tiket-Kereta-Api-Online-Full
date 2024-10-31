@@ -1,0 +1,176 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3498db;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Gaya untuk header (navbar) */
+header {
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Gaya untuk brand (logo atau nama situs) */
+.brand {
+    display: flex;
+    padding: 1%;
+    align-items: center;
+}
+
+.brand img {
+    width: 100px;
+    margin-left: 70px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+/* Gaya untuk tautan navigasi */
+nav a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 10px;
+    margin-right: 100px;
+}
+
+/* Efek hover untuk tautan navigasi */
+nav a:hover,
+nav a.active {
+    background-color: #3498db;
+    padding: 20px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+/* Gaya untuk konten utama */
+.content {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    color: #0e0e0e;
+    padding-top: 50px;
+    position: relative;
+    font-size: 25px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 4%;
+    text-align: center;
+    width: 70%;
+    border-radius: 20px;
+}
+
+/* Gaya untuk judul form */
+.container h2 {
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk formulir data diri */
+form {
+    background-color: #3498db;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+/* Gaya untuk grup formulir */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+/* Gaya untuk label dalam grup formulir */
+.form-group label {
+    margin-right: 30px;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* Gaya untuk elemen input/select dalam grup formulir */
+.form-group select,
+.form-group input {
+    padding: 10px;
+    box-sizing: border-box;
+    flex-grow: 2;
+    font-size: 20px;
+}
+
+label {
+    color: #fff;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.form-group input[type="radio"] {
+    margin-left: 50px; /* Adjust as needed */
+    appearance: none;
+    border: 2px solid #ffffff;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px; /* Adjust as needed */
+    cursor: pointer;
+    outline: none;
+}
+
+/* Style for checked radio inputs */
+.form-group input[type="radio"]:checked {
+    background-color: #00ff08;
+}
+
+.button-kembali {
+    margin-top: 20px;
+    background-color: green;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 97%;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .brand img {
+        margin-left: 10px;
+    }
+
+    nav {
+        margin-top: 5px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .container {
+        margin-top: 60px;
+    }
+}

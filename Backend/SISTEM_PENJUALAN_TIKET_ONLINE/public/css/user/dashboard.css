@@ -1,0 +1,71 @@
+/* Reset tata letak halaman */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3498db;
+    height: 100vh; /* Tinggi 100% dari viewport height */
+    overflow: hidden; /* Menyembunyikan scrollbar dan mencegah scroll ke bawah */
+}
+
+/* Gaya untuk header (navbar) */
+header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Menentukan urutan tumpukan (z-index) */
+}
+
+/* Gaya untuk brand (logo atau nama situs) */
+.brand {
+    display: flex;
+    padding: 1%;
+    align-items: center; /* Pusatkan item di tengah vertikal */
+}
+
+.brand img {
+    width: 100px; /* Sesuaikan lebar gambar sesuai kebutuhan */
+    margin-left: 70px;
+}
+
+nav {
+    margin-top: 10px; /* Sesuaikan margin atas sesuai kebutuhan */
+}
+
+/* Gaya untuk tautan navigasi */
+nav a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 0px; /* Sesuaikan margin kiri dan kanan sesuai kebutuhan */
+    margin-right: 100px; /* Tambahkan margin kanan sesuai kebutuhan */
+}
+
+/* Efek hover untuk tautan navigasi */
+nav a:hover,
+nav a.active {
+    background-color: #3498db;
+    padding: 20px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}

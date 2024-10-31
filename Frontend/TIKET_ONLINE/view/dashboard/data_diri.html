@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Data Diri</title>
+    <link rel="stylesheet" href="../../public/css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <img src="../../public/images/logo_kai.jpg" alt="Logo">
+        </div>
+        <nav>
+            <a href="dashboard.html">BERANDA</a>
+            <a href="lihat_jadwal.html">LIHAT JADWAL</a>
+            <a href="pemesanan.html">PEMESANAN</a>
+            <a href="tiket.html">TIKET SAYA</a>
+            <a href="../../view/Login/login.html">LOGOUT</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <h2>Formulir Data Diri</h2>
+
+            <form action="#" method="post">
+                <!-- Nama Lengkap -->
+                <div class="form-group">
+                    <label for="namaLengkap">Nama Lengkap:</label>
+                    <input type="text" id="namaLengkap" name="namaLengkap" required>
+                </div>
+
+                <!-- NIK -->
+                <div class="form-group">
+                    <label for="nik">NIK (Nomor Induk Kependudukan):</label>
+                    <input type="text" id="nik" name="nik" required>
+                </div>
+
+                <!-- No Telepon -->
+                <div class="form-group">
+                    <label for="noTelepon">No Telepon:</label>
+                    <input type="tel" id="noTelepon" name="noTelepon" required>
+                </div>
+
+                <!-- Jumlah Tiket -->
+                <div class="form-group">
+                    <label for="jumlahTiket">Jumlah Tiket:</label>
+                    <input type="number" id="jumlahTiket" name="jumlahTiket" min="1">
+                </div>
+
+                <!-- Tombol Kembali ke Halaman Sebelumnya -->
+                <a href="pilih_tiket.html" class="button button-kembali">Kembali</a>
+
+                <!-- Tombol Lanjutkan ke Proses Selanjutnya -->
+                <a href="pilih_kursi.html" class="button button-lanjutkan">Lanjutkan</a>
+            </form>
+
+            <div class="foto-pemesanan" style="margin-top: 30px;">
+                <img src="../../public/images/iklan4.jpg" alt="Bottom Image" class="bottom-image">
+                <img src="../../public/images/iklan5.jpg" alt="Bottom Image" class="bottom-image">
+                <img src="../../public/images/iklan6.jpg" alt="Bottom Image" class="bottom-image">
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+

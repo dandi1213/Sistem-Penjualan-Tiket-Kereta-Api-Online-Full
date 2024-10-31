@@ -1,0 +1,144 @@
+/* Reset tata letak halaman */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3498db;
+    height: 100vh; /* Tinggi 100% dari viewport height */
+    overflow: hidden; /* Menyembunyikan scrollbar dan mencegah scroll ke bawah */
+}
+
+/* Gaya untuk header (navbar) */
+header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Menentukan urutan tumpukan (z-index) */
+}
+
+/* Gaya untuk brand (logo atau nama situs) */
+.brand {
+    display: flex;
+    padding: 1%;
+    align-items: center; /* Pusatkan item di tengah vertikal */
+}
+
+.brand img {
+    width: 100px; /* Sesuaikan lebar gambar sesuai kebutuhan */
+    margin-left: 70px;
+}
+
+nav {
+    margin-top: 10px; /* Sesuaikan margin atas sesuai kebutuhan */
+}
+
+/* Gaya untuk tautan navigasi */
+nav a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 0px; /* Sesuaikan margin kiri dan kanan sesuai kebutuhan */
+    margin-right: 100px; /* Tambahkan margin kanan sesuai kebutuhan */
+}
+
+/* Efek hover untuk tautan navigasi */
+nav a:hover,
+nav a.active {
+    background-color: #3498db;
+    padding: 20px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+/* Gaya untuk konten utama */
+.content {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 50px;
+    position: relative;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 7%;
+    text-align: center; /* Center align the content inside the container */
+}
+
+/* Gaya untuk judul form */
+.container h2 {
+    color: #3498db; /* Set the color to match the navigation links */
+    margin-bottom: 20px; /* Add some bottom margin for separation */
+}
+
+/* Gaya untuk formulir data diri */
+form {
+    background-color: #3498db;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+/* Gaya untuk grup formulir */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+/* Gaya untuk label dalam grup formulir */
+.form-group label {
+    margin-right: 10px;
+}
+
+/* Gaya untuk elemen input/select dalam grup formulir */
+.form-group select,
+.form-group input {
+    padding: 10px;
+    box-sizing: border-box;
+    flex-grow: 2;
+}
+
+.button-kembali {
+    margin-top: 20px;
+    background-color: green;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    /* Responsive styling for smaller screens */
+    .brand img {
+        margin-left: 10px;
+    }
+
+    nav {
+        margin-top: 5px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .container {
+        margin-top: 60px;
+    }
+}

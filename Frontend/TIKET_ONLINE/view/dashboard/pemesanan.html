@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Tiket Kereta</title>
+    <link rel="stylesheet" href="../../public/css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <img src="../../public/images/logo_kai.jpg" alt="Logo">
+        </div>
+        <nav>
+            <a href="dashboard.html">BERANDA</a>
+            <a href="lihat_jadwal.html">LIHAT JADWAL</a>
+            <a href="pemesanan.html">PEMESANAN</a>
+            <a href="tiket.html">TIKET SAYA</a>
+            <a href="../../view/Login/login.html">LOGOUT</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <h2>Formulir Pemesanan Tiket Kereta</h2>
+
+            <form action="#" method="post">
+                <!-- Stasiun Awal -->
+                <div class="form-group">
+                    <label for="stasiunAwal">Stasiun Awal:</label>
+                    <select id="stasiunAwal" name="stasiunAwal">
+                        <option value="jakarta">Gambir</option>
+                        <option value="bandung">Bandung</option>
+                        <option value="surabaya">Surabaya</option>
+                        <!-- Tambahkan stasiun-stasiun lain sesuai kebutuhan -->
+                    </select>
+                </div>
+
+                <!-- Stasiun Akhir -->
+                <div class="form-group">
+                    <label for="stasiunAkhir">Stasiun Akhir:</label>
+                    <select id="stasiunAkhir" name="stasiunAkhir">
+                        <option value="surabaya">Surabaya</option>
+                        <option value="bandung">Bandung</option>
+                        <option value="jakarta">Gambir</option>
+                        <!-- Tambahkan stasiun-stasiun lain sesuai kebutuhan -->
+                    </select>
+                </div>
+
+                <!-- Tanggal Berangkat -->
+                <div class="form-group">
+                    <label for="tanggalBerangkat">Tanggal Berangkat:</label>
+                    <input type="date" id="tanggalBerangkat" name="tanggalBerangkat">
+                </div>
+
+                  <!-- Tombol Kembali ke Halaman Dashboard -->
+                <a href="lihat_jadwal.html" class="button button-kembali">Kembali</a>
+
+                <!-- Tombol Pesan Sekarang ke Halaman Pemesanan.html -->
+                <a href="pilih_tiket.html" class="button button-pesan">Cari Tiket</a>
+                </form>
+               
+                <div class="foto-pemesanan" style="margin-top: 30px;">
+                    <img src="../../public/images/iklan1.jpg" alt="Bottom Image" class="bottom-image">
+                    <img src="../../public/images/iklan2.jpg" alt="Bottom Image" class="bottom-image">
+                    <img src="../../public/images/iklan3.jpg" alt="Bottom Image" class="bottom-image">
+                </div>
+
+            </div>
+    </div>
+</body>
+</html>

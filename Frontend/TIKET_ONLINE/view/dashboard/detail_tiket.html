@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Pemesanan</title>
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <style>
+        form p {
+            display: grid;
+            grid-template-columns: 1fr 3fr; /* Two columns for label and input */
+            gap: 10px; /* Add space between columns */
+            margin-bottom: 15px; /* Add margin between each label and input pair */
+        }
+
+        label {
+            margin-bottom: 5px; /* Add margin below each label */
+        }
+
+        input {
+            width: 90%; /* Make the input fields fill the entire width of their container */
+            padding: 8px; /* Add padding to the input fields for better aesthetics */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <img src="../../public/images/logo_kai.jpg" alt="Logo">
+        </div>
+        <nav>
+            <a href="dashboard.html">BERANDA</a>
+            <a href="lihat_jadwal.html">LIHAT JADWAL</a>
+            <a href="pemesanan.html">PEMESANAN</a>
+            <a href="tiket.html">TIKET SAYA</a>
+            <a href="../../view/Login/login.html">LOGOUT</a>
+        </nav>
+    </header>
+
+    <div class="content-container">
+        <div class="content">
+            <div class="container">
+                <h2>Informasi Pemesanan</h2>
+    
+                <form action="">
+                    <p>
+                        <label>Nama Lengkap:</label>
+                        <input type="text" value="M Dandi Al Idrus" readonly>
+                    </p>
+                    <p>
+                        <label>NIK:</label>
+                        <input type="text" value="1234567890" readonly>
+                    </p>
+                    <p>
+                        <label>Nama Kereta:</label>
+                        <input type="text" value="Argo Bromo Anggrek" readonly>
+                    </p>
+                    <p>
+                        <label>Stasiun Awal:</label>
+                        <input type="text" value="Gambir" readonly>
+                    </p>
+                    <p>
+                        <label>Stasiun Akhir:</label>
+                        <input type="text" value="Surabaya" readonly>
+                    </p>
+                    <p>
+                        <label>No Gerbong:</label>
+                        <input type="text" value="Eksekutif 4" readonly>
+                    </p>
+                    <p>
+                        <label>No Kursi:</label>
+                        <input type="text" value="12B" readonly>
+                    </p>
+                    <p>
+                        <label>Jumlah Tiket:</label>
+                        <input type="text" value="2" readonly>
+                    </p>
+                    <p>
+                        <label>Harga:</label>
+                        <input type="text" value="Rp 1.400.000" readonly>
+                    </p>
+                    
+                     <!-- Tombol Kembali ke Halaman Dashboard -->
+                    <a href="pilih_kursi.html" class="button button-kembali">Kembali</a>
+
+                    <!-- Tombol Pesan Sekarang ke Halaman Pemesanan.html -->
+                    <a href="bayar.html" class="button button-pesan">Bayar</a>
+                </form>
+                <div class="foto-pemesanan" style="margin-top: 30px;">
+                    <img src="../../public/images/iklan7.jpg" alt="Bottom Image" class="bottom-image">
+                    <img src="../../public/images/iklan8.jpg" alt="Bottom Image" class="bottom-image">
+                    <img src="../../public/images/iklan9.jpg" alt="Bottom Image" class="bottom-image">
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

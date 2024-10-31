@@ -1,0 +1,449 @@
+/* Reset tata letak halaman */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3498db;
+}
+
+/* Gaya untuk header (navbar) */
+header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Menentukan urutan tumpukan (z-index) */
+}
+
+/* Gaya untuk brand (logo atau nama situs) */
+.brand {
+    display: flex;
+    padding: 1%;
+    align-items: center; /* Pusatkan item di tengah vertikal */
+}
+
+.brand img {
+    width: 100px; /* Sesuaikan lebar gambar sesuai kebutuhan */
+    margin-left: 70px;
+}
+
+nav {
+    margin-top: 10px; /* Sesuaikan margin atas sesuai kebutuhan */
+}
+
+/* Gaya untuk tautan navigasi */
+nav a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 0px; /* Sesuaikan margin kiri dan kanan sesuai kebutuhan */
+    margin-right: 100px; /* Tambahkan margin kanan sesuai kebutuhan */
+}
+
+/* Efek hover untuk tautan navigasi */
+nav a:hover,
+nav a.active {
+    background-color: #3498db;
+    padding: 20px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+/* Gaya untuk dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+/* Gaya untuk tabel */
+table {
+    width: 100%; /* Tabel akan memenuhi lebar container */
+    border-collapse: collapse; /* Menggabungkan batas tabel */
+    margin-top: 20px; /* Margin atas agar tidak terlalu dekat dengan elemen sebelumnya */
+}
+
+/* Gaya untuk sel header tabel */
+th {
+    background-color: #3498db; /* Warna latar belakang header */
+    color: #fff; /* Warna teks header */
+    padding: 10px; /* Padding di dalam sel header */
+    text-align: left; /* Teks di header rata kiri */
+}
+
+/* Gaya untuk sel data tabel */
+td {
+    padding: 10px; /* Padding di dalam sel data */
+    border: 1px solid #ddd; /* Garis antar sel data */
+}
+
+.container {
+    background-color: transparent; /* atau sesuaikan dengan warna latar belakang yang diinginkan */
+}
+
+
+/* Gaya untuk konten utama */
+.content {
+    margin-top: 80px; /* Sesuaikan dengan tinggi header untuk mencegah tumpang tindih */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh; /* Tinggi sesuaikan dengan viewport tinggi pengguna */
+    display: flex;
+    align-items: flex-start; /* Menggeser konten ke atas halaman */
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 50px; /* Menambahkan padding atas untuk memisahkan dari header */
+}
+
+.table-container {
+    max-height: 500px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.jadwal-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.jadwal-table thead {
+    position: sticky;
+    top: 0;
+    background-color: #f5f5f5;
+}
+
+.jadwal-table th, .jadwal-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Gaya untuk sel header tabel */
+.jadwal-table th {
+    background-color: #ffffff; /* Warna latar belakang header */
+    color: #000000; /* Warna teks header */
+    padding: 20px; /* Padding di dalam sel header */
+    text-align: center; /* Teks di header rata tengah */
+    white-space: nowrap; /* Mencegah teks melipat saat melebihi lebar */
+    overflow: hidden; /* Mengatasi overflow yang mungkin terjadi */
+    text-overflow: ellipsis; /* Menambahkan titik elipsis jika teks overflow */
+    width: 150px; /* Sesuaikan lebar sesuai kebutuhan */
+}
+
+/* Gaya untuk sel data tabel */
+.jadwal-table td {
+    background-color: #00000061 ;
+    padding: 30px; /* Padding di dalam sel data */
+    border: 1px solid #ffffff; /* Garis antar sel data */
+    text-align: center; /* Teks di sel data rata tengah */
+}
+
+/* Gaya untuk tombol Kembali dan Pesan Sekarang */
+.button-kembali, .button-pesan {
+    display: block;
+    margin: 20px auto;
+}
+
+/* Gaya untuk tombol Kembali */
+.button-kembali {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-right: 400px; /* Menambahkan margin kanan */
+    margin-left: 0;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button-kembali:hover {
+    background-color: #2980b9;
+}
+
+/* Gaya untuk tombol Pesan Sekarang */
+.button-pesan {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: 10px; /* Menambahkan margin kiri */
+    margin-right: 0;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button-pesan:hover {
+    background-color: #2980b9;
+}
+
+/* Gaya untuk tombol Pesan Sekarang
+.button-pesan {
+    background-color: #ffffff;
+    color: #2980b9;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-pesan:hover {
+    background-color: #00000061 ;
+} */
+
+/* Gaya untuk tombol */
+.button {
+    display: inline-block;
+    padding: 15px 20px;
+    margin-top: 20px; /* Menambahkan margin atas untuk memisahkan tombol dari formulir */
+    background-color: #ffffff;
+    color: #2980b9;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #00000061 ;
+}
+
+/* Gaya untuk formulir data diri */
+form {
+    background-color: #00000061; /* Warna latar belakang formulir */
+    padding: 40px; /* Padding di dalam formulir */
+    border-radius: 10px; /* Corner radius agar formulir terlihat lebih cantik */
+    margin-top: 20px; /* Margin atas untuk memberikan ruang antara formulir dan elemen sebelumnya */
+    max-width: 700px; /* Sesuaikan lebar maksimum formulir */
+    margin-left: auto; /* Meletakkan formulir ke tengah horizontal */
+    margin-right: auto; /* Meletakkan formulir ke tengah horizontal */
+}
+
+/* Gaya untuk grup formulir */
+.form-group {
+    display: flex;
+    align-items: center; /* Pusatkan elemen secara vertikal */
+    margin-bottom: 16px; /* Berikan margin bawah pada setiap grup formulir */
+}
+
+/* Gaya untuk label dalam grup formulir */
+.form-group label {
+    margin-right: 10px; /* Berikan margin kanan pada label agar terpisah dari input */
+}
+
+/* Gaya untuk elemen input/select dalam grup formulir */
+.form-group select, .form-group input {
+    padding: 10px; /* Berikan padding pada elemen input/select */
+    box-sizing: border-box; /* Sesuaikan lebar input/select termasuk padding dan border */
+    flex-grow: 2; /* Menentukan elemen input/select dapat melebar (gunakan flex-grow: 2 atau angka sesuai kebutuhan) */
+}
+
+/* Gaya untuk formulir pemesanan */
+.form-pemesanan {
+    max-width: 600px; /* Sesuaikan lebar maksimum formulir */
+    margin: auto; /* Pusatkan formulir di tengah halaman */
+}
+
+.form-pemesanan .form-row {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.form-pemesanan .form-row label {
+    flex: 1; /* Biarkan label memenuhi sebagian besar ruang */
+    text-align: left; /* Rata kiri pada label */
+    margin-right: 10px; /* Berikan margin ke kanan agar terpisah dari input */
+}
+
+.form-pemesanan .form-row input {
+    flex: 2; /* Biarkan input memenuhi sebagian besar ruang */
+}
+
+.form-pemesanan .form-row span {
+    flex: 1; /* Biarkan span memenuhi sebagian besar ruang */
+}
+
+.form-pemesanan .text-center {
+    text-align: center; /* Rata tengah untuk teks di bawah QR code */
+}
+    /* Tambahkan style CSS di sini */
+.tiket-form {
+    background-color: #00000061;
+    padding: 60px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tiket-form .form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; /* Ubah jarak menjadi lebih kecil */
+    width: 100%;
+}
+
+.tiket-form .form-row label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.tiket-form .form-row input,
+.tiket-form .form-row span {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.tiket-form .text-center {
+    text-align: center;
+}
+
+/* Gaya untuk card tiket */
+.tiket-card {
+    background-color: #00000093;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block; /* Mengatur tiket-card menjadi inline block */
+    width: 15%; /* Mengatur lebar kartu, bisa disesuaikan */
+    margin: 0 10px 20px; /* Memberi margin agar kartu terlihat berdampingan dan ada jarak di bawahnya */
+        
+}
+
+.kursi-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kursi-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.kursi-gap {
+    height: 20px; /* Jarak sebelum Baris Kursi 3 */
+}
+
+.label {
+    display: inline-block;
+    width: 30px; /* Sesuaikan lebar label sesuai kebutuhan */
+    text-align: center;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.seat {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Status Kursi */
+.seat[data-status="occupied"] {
+    background-color: red; /* Kursi Terisi */
+    cursor: not-allowed;
+}
+
+.seat[data-status="available"] {
+    background-color: green; /* Kursi Kosong */
+}
+
+.seat[data-status="selected"] {
+    background-color: yellow; /* Kursi Dipilih */
+}
+
+/* Gaya untuk informasi pemesanan */
+.informasi-pemesanan {
+    background-color: #00000093;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 40px; /* Menambahkan jarak atas */
+    margin-bottom: 40px; /* Menambahkan jarak bawah */
+    text-align: left;
+}
+
+.informasi-pemesanan p {
+    margin: 10px 0; /* Menambahkan margin atas dan bawah pada paragraf */
+    font-size: 18px; /* Menambahkan ukuran font */
+    display: flex;
+    justify-content: space-between; /* Membuat jarak di antara elemen menjadi seimbang */
+    align-items: flex-start; /* Pusatkan elemen secara vertikal */
+}
+
+.informasi-pemesanan label {
+    font-weight: bold; /* Menambahkan ketebalan pada label */
+    width: 150px; /* Menentukan lebar label */
+    text-align: left; /* Rata kiri label */
+}
+
+.informasi-pemesanan span {
+    font-weight: bold; /* Menambahkan ketebalan pada span */
+    flex-grow: 1; /* Memberikan fleksibilitas kepada span untuk memenuhi sisa ruang */
+    text-align: left; /* Rata kiri span */
+}
+
+
+
+
+
+
+

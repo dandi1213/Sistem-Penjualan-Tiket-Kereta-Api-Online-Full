@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiket Saya</title>
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <!-- Tambahkan script untuk mengimpor library QR code -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <img src="../../public/images/logo_kai.jpg" alt="Logo">
+        </div>
+        <nav>
+            <a href="dashboard.html">BERANDA</a>
+            <a href="lihat_jadwal.html">LIHAT JADWAL</a>
+            <a href="pemesanan.html">PEMESANAN</a>
+            <a href="tiket.html">TIKET SAYA</a>
+            <a href="../../view/Login/login.html">LOGOUT</a>
+        </nav>
+    </header>
+
+    <!-- Ubah struktur HTML seperti ini -->
+    <div class="content">
+        <div class="container">
+            <form class="tiket-form">
+                <h2>Informasi Tiket</h2>
+
+                <div class="form-row">
+                    <label for="namaKereta">Nama Kereta</label>
+                    <input type="text" id="namaKereta" name="namaKereta" value="Argo Bromo Anggrek" readonly>
+                </div>
+
+                <div class="form-row">
+                    <label for="tujuan">Tujuan</label>
+                    <input type="text" id="tujuan" name="tujuan" value="GMBR &rarr; SGU" readonly>
+                </div>
+
+                <div class="form-row">
+                    <label for="waktuBerangkat">Waktu Berangkat</label>
+                    <span>15:00</span>
+                    <label for="waktuTiba">Waktu Tiba</label>
+                    <span>17:00</span>
+                </div>
+
+                <div class="form-row">
+                    <label for="namaPenumpang">Nama Penumpang</label>
+                    <input type="text" id="namaPenumpang" name="namaPenumpang" value="M Dandi Al Idrus" readonly>
+                </div>
+
+                <div class="form-row">
+                    <label for="noGerbong">No Gerbong</label>
+                    <input type="text" id="noGerbong" name="noGerbong" value="Gerbong 1" readonly>
+                </div>
+
+                <div class="form-row">
+                    <label for="noKursi">No Kursi</label>
+                    <input type="text" id="noKursi" name="noKursi" value="12B" readonly>
+                </div>
+
+                <!-- Tambahkan tulisan di atas QR code -->
+                <p class="text-center">Scan QR Code untuk saat di stasiun</p>
+
+                <!-- Tambahkan div untuk menampilkan QR code dengan margin-top -->
+                <div id="qrcode" style="width: 200px; height: 200px; margin: 20px auto;"></div>
+
+                <!-- Tambahkan tombol untuk download QR code -->
+                <a id="downloadButton" href="#" class="button" download="QRCode.png">Download QR Code</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Ganti teks URL dengan tautan profil TikTok Anda
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: "http://tiktok.com/@dndialidrs", // Ganti dengan tautan profil TikTok Anda
+            width: 200,
+            height: 200
+        });
+        // Tambahkan event listener untuk tombol download
+        document.getElementById("downloadButton").addEventListener("click", function () {
+            // Ambil data gambar dari elemen QR code
+            var imageData = document.getElementById("qrcode").getElementsByTagName("img")[0].src;
+
+            // Buat tautan untuk men-download gambar
+            var downloadLink = document.createElement("a");
+            downloadLink.href = imageData;
+            downloadLink.download = "QRCode.png";
+
+            // Simulasikan klik pada tautan download
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        });
+    </script>
+
+</body>
+</html>

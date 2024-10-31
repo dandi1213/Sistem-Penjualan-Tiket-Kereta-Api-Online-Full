@@ -1,0 +1,165 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    margin-left: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none ;
+    text-decoration: none;
+}
+.sidebar{
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #3498db;
+}
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #3498db;
+    user-select: none;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 60px;
+    margin-top: 30px;
+    box-sizing: border-box;
+    transition: .4s;
+}
+
+ul li:hover a{
+    padding-left: 50px;
+}
+
+.brand img {
+    margin-top: 80px;
+    width: 100px; /* Sesuaikan lebar gambar sesuai kebutuhan */
+    margin-left: 70px;
+    margin-bottom: 50px;
+}
+
+.content {
+    margin-top: 30%;
+    margin-left: 230px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content h2{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.content table {
+    width: 100%; /* Tabel akan memenuhi lebar container */
+    border-collapse: collapse; /* Menggabungkan batas tabel */
+    margin-top: 20px; /* Margin atas agar tidak terlalu dekat dengan elemen sebelumnya */
+}
+
+.content th, .content td {
+    padding: 50px; /* Padding di dalam sel data */
+    border: 1px solid #ddd; /* Garis antar sel data */
+}
+
+.content td{
+    text-align: center;
+}
+
+.content th {
+    background-color: #3498db; /* Warna latar belakang header */
+    color: #fff; /* Warna teks header */
+    padding: 50px; /* Padding di dalam sel header */
+    text-align: center; /* Teks di header rata kiri */
+}
+/* Gaya untuk tombol Kembali dan Pesan Sekarang */
+.button-kembali, .button-pesan {
+    display: block;
+    margin: 20px auto;
+}
+
+/* Gaya untuk tombol Kembali */
+.button-kembali {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: 0;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button-kembali:hover {
+    background-color: #2980b9;
+}
+
+.content-tambah_data {
+    margin-left: 15%; /* Adjust margin for better alignment */
+    padding: 100px;
+    width: 50%; /* Adjust width of the content */
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+form {
+    max-width: none; /* Remove max-width for the form */
+    width: 100%; /* Make the form take the full width */
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+input {
+    width: calc(100% - 20px); /* Adjust input width and add spacing */
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.button-edit,
+.button-hapus {
+    display: inline-block;
+    padding: 8px;
+    margin-bottom: 1px;
+    margin-right: 5px;
+    background-color: #2ecc71;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button-edit:hover,
+.button-hapus:hover {
+    background-color: #27ae60;
+}

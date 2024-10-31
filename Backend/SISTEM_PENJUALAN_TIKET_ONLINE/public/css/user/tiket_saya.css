@@ -1,0 +1,205 @@
+/* Reset tata letak halaman */
+body {
+	font-family: "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #3498db;
+}
+
+/* Gaya untuk header (navbar) */
+header {
+	background-color: #ffffff;
+	color: #fff;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000; /* Menentukan urutan tumpukan (z-index) */
+}
+
+/* Gaya untuk brand (logo atau nama situs) */
+.brand {
+	display: flex;
+	padding: 1%;
+	align-items: center; /* Pusatkan item di tengah vertikal */
+}
+
+.brand img {
+	width: 100px; /* Sesuaikan lebar gambar sesuai kebutuhan */
+	margin-left: 70px;
+}
+
+nav {
+	margin-top: 10px; /* Sesuaikan margin atas sesuai kebutuhan */
+}
+
+/* Gaya untuk tautan navigasi */
+nav a {
+	color: #3498db;
+	text-decoration: none;
+	margin: 0 0px; /* Sesuaikan margin kiri dan kanan sesuai kebutuhan */
+	margin-right: 100px; /* Tambahkan margin kanan sesuai kebutuhan */
+}
+
+/* Efek hover untuk tautan navigasi */
+nav a:hover,
+nav a.active {
+	background-color: #3498db;
+	padding: 20px;
+	border-radius: 20px;
+	color: #ffffff;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(3, 33%);
+	width: 80%;
+	max-width: 95%; /* Adjust the maximum width as needed */
+	margin-top: 10%;
+	margin-left: 10%;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	/* Add the following styles for scrollability */
+	overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+	height: 70vh;
+	border-radius: 30px;
+}
+
+.button {
+	margin-top: 20px;
+	background-color: green;
+	display: inline-block;
+	padding: 15px 25px;
+	text-decoration: none;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.button-kembali {
+	margin-top: 20px;
+	background-color: green;
+	display: inline-block;
+	padding: 15px 25px;
+    height: 30px;
+    width: 80px;
+	text-decoration: none;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+    text-align: center;
+    position: fixed;
+    margin-left: 40%;
+    bottom: 45%;
+}
+
+p{
+    position: fixed;
+    left: 46%;
+    bottom: 55%;
+    font-size: 40px;
+}
+
+
+form {
+	background-color: #3498db;
+	/* Warna latar belakang formulir */
+	padding: 20px;
+	/* Padding di dalam formulir */
+	border-radius: 10px;
+	/* Corner radius agar formulir terlihat lebih cantik */
+	max-width: 700px;
+	/* Sesuaikan lebar maksimum formulir */
+	margin: 10% auto;
+	/* Meletakkan formulir ke tengah horizontal */
+}
+
+form:hover{
+    transform: scale(1.10);
+    transition:  0.70s ease;
+}
+
+input {
+	width: 100%;
+	/* Make the input fields fill the entire width of their container */
+	padding: 15px;
+	/* Add padding to the input fields for better aesthetics */
+	box-sizing: border-box;
+	/* Include padding and border in the element's total width and height */
+}
+
+.hidden {
+	display: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    text-align: center;
+    width: 80%;
+    height: 66%;
+  }
+
+  .popup h1{
+    position: fixed;
+	left: 30%;
+	top: 0%;
+	font-size: 50px;
+  }
+
+  .popup h2{
+    position: fixed;
+	left: 30%;
+	top: 15%;
+	float: left;
+  }
+  
+  .tombol-11 {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    margin-top: 280px;
+    width: 100%;
+  }
+
+  .tombol-12 {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+    .tombol-1 {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+  }

@@ -1,0 +1,215 @@
+/* // User_controller.php
+
+
+
+
+
+public function simpan_data_pengguna() {
+    // Get the user input from the form
+    $kodeKereta = $this->input->post('kodeKereta');
+    $namaPengguna = $this->input->post('namaLengkap');
+    $nik = $this->input->post('nik');
+    $noTelepon = $this->input->post('noTelepon');
+    $tanggalBerangkat = $this->input->post('tanggalBerangkat');
+    $jumlahTiket = $this->input->post('jumlahTiket');
+
+    // You may want to validate the input here if necessary
+
+    // Prepare data to be displayed in the next page
+    $data['kode_kereta'] = $kodeKereta;
+    $data['nama_pengguna'] = $namaPengguna;
+    $data['nik'] = $nik;
+    $data['no_telepon'] = $noTelepon;
+    $data['tanggal_berangkat'] = $tanggalBerangkat;
+    $data['jumlah_tiket'] = $jumlahTiket;
+
+    // Load the view to display the information
+    $this->load->view('user/data_pengguna', $data);
+}
+
+
+public function simpan_pilihan_kursi() {
+    // Get data from the form
+    $pengguna_id = $this->input->post('pengguna_id');
+    $kodeKereta = $this->input->post('kodeKereta');
+    $gerbong = $this->input->post('gerbong');
+    $kursi = $this->input->post('kursi');
+
+    // Save the selected gerbong and kursi to the database using your model
+    $this->User_model->simpan_pilihan_kursi($pengguna_id, $kodeKereta, $gerbong, $kursi);
+
+    // Prepare data to be passed to the view
+    $data['pengguna_id'] = $pengguna_id;
+    $data['gerbong'] = $gerbong;
+    $data['kursi'] = $kursi;
+
+    // Load the view to display successful selection
+    $this->load->view('user/pilihan_kursi_berhasil', $data);
+}    
+
+
+public function bayar_tiket() {
+    // Mendapatkan data dari formulir
+    $kode_pengguna = $this->input->post('kode_pengguna');
+    $no_gerbong = $this->input->post('no_gerbong');
+    $no_kursi = $this->input->post('no_kursi');
+
+    // Menyimpan data tiket ke dalam tabel 'tbl_tiket' melalui model
+    $this->User_model->simpan_data_tiket($kode_pengguna, $no_gerbong, $no_kursi);
+
+    // Menyiapkan data yang akan dilewatkan ke view 'user/transaksi_berhasil'
+    $data['kode_pengguna'] = $kode_pengguna;
+    $data['no_gerbong'] = $no_gerbong;
+    $data['no_kursi'] = $no_kursi;
+
+    // Load the view to display the successful transaction
+    $this->load->view('user/transaksi_berhasil', $data);
+} */
+
+/* 
+// User_model.php
+public function get_kode_pengguna_by_kode_tiket($kode_tiket)
+{
+    $this->db->select('kode_pengguna');
+    $this->db->where('kode_tiket', $kode_tiket);
+    $query = $this->db->get('tbl_tiket');
+
+    if ($query->num_rows() > 0) {
+        $row = $query->row();
+        return $row->kode_pengguna;
+    }
+
+    return false;
+}
+
+// User_model.php
+public function get_nik_by_kode_pengguna($kode_pengguna)
+{
+    $this->db->select('nik');
+    $this->db->where('kode_pengguna', $kode_pengguna);
+    $query = $this->db->get('tbl_pengguna');
+
+    if ($query->num_rows() > 0) {
+        $row = $query->row();
+        return $row->nik;
+    }
+
+    return false;
+}
+// User_model.php
+public function get_nama_pengguna_by_kode_pengguna($kode_pengguna)
+{
+    $this->db->select('nama_pengguna');
+    $this->db->where('kode_pengguna', $kode_pengguna);
+    $query = $this->db->get('tbl_pengguna');
+
+    if ($query->num_rows() > 0) {
+        $row = $query->row();
+        return $row->nama_pengguna;
+    }
+
+    return false;
+}
+
+// User_model.php
+public function get_kode_kereta_by_kode_pengguna($kode_pengguna)
+{
+    $this->db->select('kode_kereta');
+    $this->db->where('kode_pengguna', $kode_pengguna);
+    $query = $this->db->get('tbl_pengguna');
+
+    if ($query->num_rows() > 0) {
+        $row = $query->row();
+        return $row->kode_kereta;
+    }
+
+    return false;
+}
+
+// User_model.php
+public function get_nama_kereta_by_kode_kereta($kode_kereta)
+{
+    $this->db->select('nama_kereta');
+    $this->db->where('kode_kereta', $kode_kereta);
+    $query = $this->db->get('tbl_kereta');
+
+    if ($query->num_rows() > 0) {
+        $row = $query->row();
+        return $row->nama_kereta;
+    }
+
+    return false;
+}
+
+// User_model.php
+public function get_stasiun_awal_by_kode_kereta($kode_kereta)
+{
+    $this->db->select('stasiun_awal');
+    $this->db->where('kode_kereta', $kode_kereta);
+    $query = $this->db->get('tbl_kereta');
+
+    if ($query->num_rows() > 0) {
+        $row = $query->row();
+        return $row->stasiun_awal;
+    }
+
+    return false;
+}
+
+public function get_stasiun_akhir_by_kode_kereta($kode_kereta)
+{
+    $this->db->select('stasiun_akhir');
+    $this->db->where('kode_kereta', $kode_kereta);
+    $query = $this->db->get('tbl_kereta');
+
+    if ($query->num_rows() > 0) {
+        $row = $query->row();
+        return $row->stasiun_akhir;
+    }
+
+    return false;
+}
+
+// User_model.php
+public function get_jadwal_berangkat_by_kode_kereta($kode_kereta)
+{
+    $this->db->select('jadwal_berangkat');
+    $this->db->where('kode_kereta', $kode_kereta);
+    $query = $this->db->get('tbl_kereta');
+
+    if ($query->num_rows() > 0) {
+        $row = $query->row();
+        return $row->jadwal_berangkat;
+    }
+
+    return false;
+}
+
+public function get_jadwal_sampai_by_kode_kereta($kode_kereta)
+{
+    $this->db->select('jadwal_sampai');
+    $this->db->where('kode_kereta', $kode_kereta);
+    $query = $this->db->get('tbl_kereta');
+
+    if ($query->num_rows() > 0) {
+        $row = $query->row();
+        return $row->jadwal_sampai;
+    }
+
+    return false;
+}
+
+
+public function get_tanggal_berangkat_by_kode_pengguna($kode_pengguna)
+{
+    $this->db->select('tanggal_berangkat');
+    $this->db->where('kode_pengguna', $kode_pengguna);
+    $query = $this->db->get('tbl_pengguna');
+
+    if ($query->num_rows() > 0) {
+        $row = $query->row();
+        return $row->tanggal_berangkat;
+    }
+
+    return false;
+} */

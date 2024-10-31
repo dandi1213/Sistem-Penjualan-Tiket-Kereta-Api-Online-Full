@@ -1,0 +1,52 @@
+<!-- tambah_data.html -->
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data Kereta</title>
+    <link rel="stylesheet" href="../../public/css/admin_style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">
+            <img src="../../public/images/logo_kai.jpg" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="dashboard.html"></i>Dashboard</a></li>
+            <li><a href="tiket.html"></i>Tiket</a></li>
+            <li><a href="../../view/Login/login.html"></i>Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="content-tambah_data">
+        <h2>Tambah Data Kereta</h2>
+        <form action="proses_tambah_data.php" method="post">
+            <label for="nama_kereta">Nama Kereta:</label>
+            <input type="text" id="nama_kereta" name="nama_kereta" required>
+
+            <label for="stasiun_awal">Stasiun Awal:</label>
+            <input type="text" id="stasiun_awal" name="stasiun_awal" required>
+
+            <label for="stasiun_akhir">Stasiun Akhir:</label>
+            <input type="text" id="stasiun_akhir" name="stasiun_akhir" required>
+
+            <label for="jadwal_berangkat">Jadwal Berangkat:</label>
+            <input type="text" id="jadwal_berangkat" name="jadwal_berangkat" required>
+
+            <label for="jadwal_sampai">Jadwal Sampai:</label>
+            <input type="text" id="jadwal_sampai" name="jadwal_sampai" required>
+
+            <label for="harga">Harga:</label>
+            <input type="text" id="harga" name="harga" required>
+
+            <label for="stok">Stok:</label>
+            <input type="text" id="stok" name="stok" required>
+            
+            <a href="tiket.html" class="button button-kembali">Kembali</a>
+            <a href="tiket.html" class="button button-kembali">Tambah Data</a>
+        </form>
+    </div>
+</body>
+</html>

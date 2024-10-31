@@ -1,0 +1,158 @@
+/* Reset tata letak halaman */
+body {
+	font-family: "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #3498db;
+	height: 100vh; /* Tinggi 100% dari viewport height */
+	overflow: hidden; /* Menyembunyikan scrollbar dan mencegah scroll ke bawah */
+}
+
+/* Gaya untuk header (navbar) */
+header {
+	background-color: #ffffff;
+	color: #fff;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000; /* Menentukan urutan tumpukan (z-index) */
+}
+
+/* Gaya untuk brand (logo atau nama situs) */
+.brand {
+	display: flex;
+	padding: 1%;
+	align-items: center; /* Pusatkan item di tengah vertikal */
+}
+
+.brand img {
+	width: 100px; /* Sesuaikan lebar gambar sesuai kebutuhan */
+	margin-left: 70px;
+}
+
+nav {
+	margin-top: 10px; /* Sesuaikan margin atas sesuai kebutuhan */
+}
+
+/* Gaya untuk tautan navigasi */
+nav a {
+	color: #3498db;
+	text-decoration: none;
+	margin: 0 0px; /* Sesuaikan margin kiri dan kanan sesuai kebutuhan */
+	margin-right: 100px; /* Tambahkan margin kanan sesuai kebutuhan */
+}
+
+/* Efek hover untuk tautan navigasi */
+nav a:hover,
+nav a.active {
+	background-color: #3498db;
+	padding: 20px;
+	border-radius: 20px;
+	color: #ffffff;
+}
+
+.container {
+	display: grid;
+	border-radius: 30px;
+	grid-template-columns: repeat(2, 50%);
+	width: 80%;
+	max-width: 95%; /* Adjust the maximum width as needed */
+	margin: 15vh auto; /* Adjust the top margin for spacing */
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	/* Add the following styles for scrollability */
+	max-height: 70vh; /* Set the maximum height as per your design */
+	overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+	height: 100vh;
+}
+
+/* Adjust the margin for better spacing */
+.tiket-card {
+	border: 1px solid #ccc;
+	padding: 10px;
+	height: 30vh;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 50px;
+	margin-bottom: 30px; /* Reduce the margin to improve spacing */
+	background-color: #fff;
+	transition: transform 0.3s ease; /* Add a smooth transition effect */
+	text-align: center;
+	font-size: 20px;
+	border-radius: 30px;
+}
+
+.tiket-card:hover {
+	transform: scale(1.08); /* Slightly increase the size on hover */
+	background-color: #3498db;
+	.button {
+		border-radius: 30px;
+		display: inline-block;
+		padding: 10px;
+		text-decoration: none;
+		width: 90%;
+		color: #fff;
+		background-color: green;
+		border: none;
+		cursor: pointer;
+		text-align: center;
+		transition: background-color 0.9s ease; /* Add a smooth transition effect */
+	}
+}
+
+h2 {
+	color: #333;
+	text-align: center;
+	font-size: 30px;
+}
+
+.button {
+	display: none;
+}
+
+.button-kembali {
+	margin-top: 20px;
+	background-color: red;
+	display: inline-block;
+	padding: 20px;
+	text-decoration: none;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 200%;
+	margin-left: 160%;
+}
+
+.back-button {
+	position: fixed;
+	bottom: 20px; /* Adjust the bottom position as needed */
+	left: 30px; /* Adjust the left position as needed */
+	z-index: 1000; /* Set a higher z-index to make sure it's above other elements */
+}
+
+.popup h1{
+	position: fixed;
+	left: 40%;
+	top: 40%;
+	font-size: 40px;
+}
+
+.tombol-12 {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    width: 20%;
+	position: fixed;
+	left: 40%;
+	top: 60%;
+  }

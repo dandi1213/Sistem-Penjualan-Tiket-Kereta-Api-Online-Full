@@ -1,0 +1,137 @@
+<!-- tiket.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiket</title>
+    <link rel="stylesheet" href="../../public/css/admin_style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">
+            <img src="../../public/images/logo_kai.jpg" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="dashboard.html"></i>Dashboard</a></li>
+            <li><a href="tiket.html"></i>Tiket</a></li>
+            <li><a href="../../view/Login/login.html"></i>Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Tambahkan tabel di sini -->
+    <div class="content">
+        <h2>Data Tiket Kereta Api</h2>
+        <!-- Tombol Kembali ke Halaman Dashboard -->
+        <a href="tambah_data.html" class="button button-kembali">Tambah Data Kereta</a>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nama Kereta</th>
+                    <th>Stasiun Awal</th>
+                    <th>Stasiun Akhir</th>
+                    <th>Jadwal Berangkat</th>
+                    <th>Jadwal Sampai</th>
+                    <th>Harga</th>
+                    <th>Stok</th>
+                    <th>Tindakan</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Argo Parahyangan</td>
+                    <td>Bandung</td>
+                    <td>Gambir</td>
+                    <td>15:00</td>
+                    <td>17:00</td>
+                    <td>Rp 250.000</td>
+                    <td style="background-color: green;">Tersedia</td>
+                    <td>
+                        <a href="edit_data.html" class="button-edit">Edit</a>
+                        <a href="#" class="button-hapus">Hapus</a>
+                    </td>
+                </tr>
+                <!-- Tambahkan baris lain sesuai kebutuhan -->
+                <tr>
+                    <td>Argo Wilis</td>
+                    <td>Bandung</td>
+                    <td>Surabaya</td>
+                    <td>06:00</td>
+                    <td>15:00</td>
+                    <td>Rp 500.000</td>
+                    <td style="background-color: green;">Tersedia</td>
+                    <td>
+                        <a href="edit_data.html" class="button-edit">Edit</a>
+                        <a href="#" class="button-hapus">Hapus</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Harina</td>
+                    <td>Bandung</td>
+                    <td>Surabaya</td>
+                    <td>19:00</td>
+                    <td>05:00</td>
+                    <td>Rp 350.000</td>
+                    <td style="background-color: red;">Habis</td>
+                    <td>
+                        <a href="edit_data.html" class="button-edit">Edit</a>
+                        <a href="#" class="button-hapus">Hapus</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ciremai</td>
+                    <td>Bandung</td>
+                    <td>Semarang Tawang</td>
+                    <td>17:00</td>
+                    <td>01:00</td>
+                    <td>Rp 250.000</td>
+                    <td style="background-color: green;">Tersedia</td>
+                    <td>
+                        <a href="edit_data.html" class="button-edit">Edit</a>
+                        <a href="#" class="button-hapus">Hapus</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lodaya</td>
+                    <td>Bandung</td>
+                    <td>Surabaya</td>
+                    <td>17:00</td>
+                    <td>03:00</td>
+                    <td>Rp 450.000</td>
+                    <td style="background-color: red;">Habis</td>
+                    <td>
+                        <a href="edit_data.html" class="button-edit">Edit</a>
+                        <a href="#" class="button-hapus">Hapus</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bandung Raya</td>
+                    <td>Padalarang</td>
+                    <td>Cicalengka</td>
+                    <td>08:00</td>
+                    <td>12:00</td>
+                    <td>Rp 8.000</td>
+                    <td style="background-color: green;">Tersedia</td>
+                    <td>
+                        <a href="edit_data.html" class="button-edit">Edit</a>
+                        <a href="#" class="button-hapus">Hapus</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Garut Cibatuan</td>
+                    <td>Purwakarta</td>
+                    <td>Garut</td>
+                    <td>16:00</td>
+                    <td>23:00</td>
+                    <td>Rp 14.000</td>
+                    <td style="background-color: green;">Tersedia</td>
+                    <td>
+                        <a href="edit_data.html" class="button-edit">Edit</a>
+                        <a href="#" class="button-hapus">Hapus</a>
+                    </td>
+                </tr>
+        </table>
+    </div>
+</body>
+</html>

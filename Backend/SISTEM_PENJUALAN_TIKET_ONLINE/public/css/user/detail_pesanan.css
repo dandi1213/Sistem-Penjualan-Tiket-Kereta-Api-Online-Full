@@ -1,0 +1,217 @@
+/* Reset tata letak halaman */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3498db;
+    height: 100vh; /* Tinggi 100% dari viewport height */
+    overflow: hidden; /* Menyembunyikan scrollbar dan mencegah scroll ke bawah */
+}
+
+/* Gaya untuk header (navbar) */
+header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Menentukan urutan tumpukan (z-index) */
+}
+
+/* Gaya untuk brand (logo atau nama situs) */
+.brand {
+    display: flex;
+    padding: 1%;
+    align-items: center; /* Pusatkan item di tengah vertikal */
+}
+
+.brand img {
+    width: 100px; /* Sesuaikan lebar gambar sesuai kebutuhan */
+    margin-left: 70px;
+}
+
+nav {
+    margin-top: 10px; /* Sesuaikan margin atas sesuai kebutuhan */
+}
+
+/* Gaya untuk tautan navigasi */
+nav a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 0px; /* Sesuaikan margin kiri dan kanan sesuai kebutuhan */
+    margin-right: 100px; /* Tambahkan margin kanan sesuai kebutuhan */
+}
+
+/* Efek hover untuk tautan navigasi */
+nav a:hover,
+nav a.active {
+    background-color: #3498db;
+    padding: 20px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.container {
+    background-color: transparent; /* atau sesuaikan dengan warna latar belakang yang diinginkan */
+}
+
+/* Gaya untuk konten utama */
+.content {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 30px;
+    position: relative; /* Add position relative */
+}
+
+
+.button {
+    margin-left: 64%;
+    margin-top: 20px;
+    width: 23%;
+    background-color: green;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-kembali {
+    margin-left: 84%;
+    margin-top: 20px;
+    background-color: red;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button {
+    position: fixed;
+    width: 40%;
+    bottom: 89px; /* Adjust the bottom position as needed */
+    left: 11%; /* Adjust the left position as needed */
+    z-index: 1000; /* Set a higher z-index to make sure it's above other elements */
+}
+
+form {
+    background-color: white;
+    /* Warna latar belakang formulir */
+    padding: 10px;
+    /* Padding di dalam formulir */
+    border-radius: 10px;
+    /* Corner radius agar formulir terlihat lebih cantik */
+    max-width: 700px;
+    /* Sesuaikan lebar maksimum formulir */
+    height: 700px;
+    margin-left: auto;
+    /* Meletakkan formulir ke tengah horizontal */
+    margin-right: auto;
+    /* Meletakkan formulir ke tengah horizontal */
+    margin-top: 10%;
+}
+
+form p {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /* Two columns for label and input */
+    gap: 50px;
+    /* Add space between columns */
+    margin-bottom: 1px;
+    color: black;
+    /* Add margin between each label and input pair */
+}
+
+label {
+    margin-bottom: 5px;
+    /* Add margin below each label */
+}
+
+input {
+    width: 90%;
+    /* Make the input fields fill the entire width of their container */
+    padding: 8px;
+    /* Add padding to the input fields for better aesthetics */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+}
+
+h2{
+    color: #3498db;;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    text-align: center;
+    width: 70%;
+    height: 75%;
+  }
+
+  .popup h1{
+    position: fixed;
+	left: 30%;
+	top: 0%;
+	font-size: 50px;
+  }
+
+  
+  .tombol-11 {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    margin-top: 400px;
+    width: 100%;
+  }
+
+  .tombol-12 {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+    .tombol-1 {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+  }
